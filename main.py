@@ -2,12 +2,14 @@ from modules.gobuster import run_gobuster
 from modules.sqlmap import run_sqlmap
 
 def gobuster_call():
+    print("Gobuster Initiated")
     target = input("Enter the target URL: ")
     wordlist = input("Enter location of wordlist: ")
     options = input("Enter additional options (blank=default): ")
     run_gobuster(target, wordlist, options)
 
 def sqlmap_call():
+    print("Sqlmap Initiated")
     target = input("Enter the target URL: ")
     options = input("Enter additional options (blank=default): ")
 
@@ -38,9 +40,12 @@ def print_options():
     print(options)
 print_options()
 
-option = input("What tool would you like to use?\n")
-if (option == 'a'):
-    gobuster_call()
-if (option == 'b'):
-    sqlmap_call()
+while True:
+    option = input("What tool would you like to use?\n")
+    if (option == 'a'):
+        gobuster_call()
+    if (option == 'b'):
+        sqlmap_call()
+    else:
+        print("ERROR: Invalid input.")
 
