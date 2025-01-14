@@ -22,6 +22,8 @@ However, this toolkit is a **work in progress**, and future iterations will incl
      ```bash
      python3 -m venv venv
      source venv/bin/activate
+     OR
+     source .venv/Scripts/activate
      ```
    - Install required dependencies:
      ```bash
